@@ -15,11 +15,13 @@ public class ChainBuilder {
      * @param chain
      * @return the chain
      */
-    public static Chain<Integer> build(Map<Integer, Integer> map, String... chain){
-        Chain<Integer> ans = new Chain<Integer>(null, -1, null, map);
-        ans.setId(Integer.valueOf(chain[0]));
+    public static Chain<Integer> build(Map<String, Integer> map, String... chain){
+        Chain<Integer> ans = new Chain<>(null, null, null, map, null);
+        ans.setId(chain[0]);
+        map.put(chain[0],0);
         for(int i=1; i<chain.length; i+=2){
-            ans = new Chain<Integer>(ans,Integer.valueOf(chain[i]),getOperand(chain[i+1]),map);
+            map.put(chain[i], 0);
+            ans = new Chain<>(ans,chain[i],getOperand(chain[i+1]),map, chain[i+1]);
         }
         return ans;
     }
