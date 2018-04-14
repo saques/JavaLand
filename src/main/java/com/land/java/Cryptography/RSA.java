@@ -1,4 +1,4 @@
-package Cryptography;
+package com.land.java.Cryptography;
 
 import java.math.BigInteger;
 
@@ -11,7 +11,8 @@ public class RSA {
         System.out.println("PK: " +s.pk);
 
 
-        byte[] text = "This text will be encrypted!".getBytes();
+        byte[] text = ("The attempt on my life has left me scarred and deformed. " +
+                       "But I assure you, my resolve has never been stronger!").getBytes();
 
         BigInteger m = new BigInteger(text);
         System.out.println("Plaintext: " + m);

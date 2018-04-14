@@ -1,4 +1,4 @@
-package Cryptography;
+package com.land.java.Cryptography;
 
 import java.util.Random;
 import java.util.stream.LongStream;

@@ -1,4 +1,4 @@
-package Random;// Don't place your source in a package
+package com.land.java.Random;// Don't place your source in a package
 import java.util.*;
 import java.lang.*;
 

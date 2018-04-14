@@ -1,4 +1,4 @@
-package Cryptography;
+package com.land.java.Cryptography;
 
 import java.math.BigInteger;
 import java.security.SecureRandom;
